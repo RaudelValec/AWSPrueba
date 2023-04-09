@@ -9,7 +9,7 @@ const __dirname = path.dirname(__filename);
 const PORT = process.env.PORT || 80;
 const app = express();
 // Hacer que node sirva los archivos de nuestro app React
-app.use(express.static(path.resolve(__dirname,'..client/build')));
+app.use(express.static(path.resolve(__dirname,'..client/public')));
 
 
 
@@ -19,7 +19,7 @@ app.get("/api",(req,res)=>{
 
 // Todas las peticiones GET que no hayamos manejado en las líneas anteriores retornaran nuestro app React
 app.get("*",(req,res)=>{
-    res.sendFile(path.resolve(__dirname,'../client/build','index.html'));
+    res.sendFile(path.resolve(__dirname,'../client/public','index.html'));
 });
 
 
