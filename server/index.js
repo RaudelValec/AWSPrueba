@@ -6,7 +6,7 @@ import path  from "path";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 80;
 const app = express();
 // Hacer que node sirva los archivos de nuestro app React
 app.use(express.static(path.resolve(__dirname,'..client/build')));
