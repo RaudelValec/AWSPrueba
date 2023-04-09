@@ -14,7 +14,7 @@ app.use(express.static(path.resolve(__dirname,'..client/build')));
 
 
 app.get("/api",(req,res)=>{
-    res.json({msg:"Hola mundo desde el Servidor"});
+    res.json({msg:"Hola mundo desde el Servidor AWS"});
 });
 
 // Todas las peticiones GET que no hayamos manejado en las líneas anteriores retornaran nuestro app React
